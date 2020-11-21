@@ -16,13 +16,13 @@ int main() {
 			std::cout << "Podaj liczbe ("<< x << "/12): " << std::endl;
 			std::cin >> tab[i][j];
 		}
-		int lowest = tab[i][0];
-		for(int j = 1; j < M; j++) {
+		int lowest = tab[i][0]; // declaring first lowest number to compare others to
+		for(int j = 1; j < M; j++) { // checking the rest of the row for the lowest number
 			if (tab[i][j] < lowest) {
 				lowest = tab[i][j];
 			}
 		}
-		lowestNumbers[i] = lowest;
+		lowestNumbers[i] = lowest; // creating a table with the lowest numbers to nicely display it
 	}
 	for(int i = 0; i < N; i++) {
 		std::cout << "Najmniejsza liczba w wierszu " << i << " to " << lowestNumbers[i] << "." << std::endl;
